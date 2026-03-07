@@ -1,14 +1,20 @@
 /* General styles */
-html,body
-{
-    overflow-x: hidden; 
-	font-family:'Russo One', sans-serif;
+html,
+body {
+	overflow-x: hidden;
+	font-family: "Russo One", sans-serif;
 }
-a, a:hover {
+
+a,
+a:hover {
 	text-decoration: none;
 }
 
- /* Complex styling not covered by Tailwind */
+.font-montserrat {
+	font-family: "Montserrat", sans-serif;
+}
+
+/* Complex styling not covered by Tailwind */
 .dropdown:hover .dropdown-content {
 	display: flex;
 	flex-direction: column;
@@ -16,23 +22,123 @@ a, a:hover {
 	justify-content: space-around;
 }
 
-/* Headline Styles*/
-#headline {
-	font-family: 'Londrina Solid', cursive;
-}
-#headline-container {
-	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('./images/Cobain.gif');
-	background-repeat: no-repeat;
-	background-position: center top;
-	background-size: cover;
-}
-#slogan-intro {
-	font-family: 'Permanent Marker', cursive;
+.social-icon-wrap:hover {
+	transform: scale(1.25);
 }
 
-/* Gallery */
-.photo-container {
+/* Headline styles */
+#headline {
+	font-family: "Londrina Solid", cursive;
+}
+
+#headline-container {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./images/Cobain.gif");
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: cover;
+}
+
+#slogan-intro {
+	font-family: "Permanent Marker", cursive;
+}
+
+/* Carousel styles */
+.slide-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: 3rem 0;
+	text-align: center;
+	transition: transform 700ms ease-in-out, opacity 700ms ease-in-out;
+}
+
+.slide-title {
+	font-size: 1.875rem;
+	color: rgb(209 213 219);
+}
+
+.slide-description {
+	font-size: 1.25rem;
+	color: rgb(229 231 235);
+}
+
+.slide-photo {
+	width: 24rem;
+	height: 24rem;
+	border-radius: 9999px;
+	transition: transform 500ms ease-in-out;
+}
+
+.slide-photo:hover {
+	transform: scale(1.1);
+}
+
+.slide-caption {
+	font-size: 1.5rem;
+	color: rgb(229 231 235);
+}
+
+/* Experience logo styles */
+.company-logo {
+	width: 9rem;
+	height: 9rem;
+	margin: 2.5rem;
+}
+
+.company-logo:hover {
+	transform: scale(1.25);
+}
+
+/* Gallery styles */
+.photo-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 18rem;
+	margin: 0.25rem;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+}
+
+.gallery-title {
+	padding: 0.5rem 0;
+	opacity: 0.75;
+	background-color: rgb(71 85 105);
+	color: rgb(229 231 235);
+}
+
+.gallery-detail {
+	padding: 0.5rem 0;
+	opacity: 0.75;
+	background-color: rgb(100 116 139);
+	color: rgb(229 231 235);
+	font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 639px) {
+	.slide-title {
+		font-size: 1.25rem;
+	}
+
+	.slide-description,
+	.slide-caption {
+		font-size: 1.125rem;
+	}
+
+	.slide-photo {
+		width: 16rem;
+		height: 16rem;
+	}
+}
+
+@media (min-width: 640px) {
+	.gallery-detail {
+		display: none;
+	}
+
+	.photo-container:hover .gallery-detail {
+		display: block;
+	}
 }
