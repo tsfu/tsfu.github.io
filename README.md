@@ -22,7 +22,4 @@ Update Log:
   - Sep 2023: Update photos from 2023 summer.   
   - (V2 branched on Jul 17 2024)
   - Jul 2024: Adopt tailwind, removed bootstrap. Retire complex css styles in files (removed all mobile-only styles). Update photos/slides.   
-
-TODOs 2024:
-  - Better interactions/animations for mobile UX. 
-  - Update font awesome icons to newer version.
+  - Mar 2026: Improved SEO metadata, accessibility, external link security, and image loading; fixed text typos and removed unused jQuery.
